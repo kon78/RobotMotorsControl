@@ -34,15 +34,15 @@ Motor1A.write(bool(HIGH))
 Motor1B.write(bool(LOW))
 Motor1E.write(bool(HIGH))
 
-Motor2A.write(bool(HIGH))
-Motor2B.write(bool(LOW))
-Motor2E.write(bool(HIGH))
-
-sleep(2)
-print ("Going backwards")
 Motor1A.write(bool(LOW))
 Motor1B.write(bool(HIGH))
 Motor1E.write(bool(HIGH))
+
+sleep(2)
+print ("Going backwards")
+Motor2A.write(bool(HIGH))
+Motor2B.write(bool(LOW))
+Motor2E.write(bool(HIGH))
 
 Motor2A.write(bool(LOW))
 Motor2B.write(bool(HIGH))
@@ -51,6 +51,7 @@ Motor2E.write(bool(HIGH))
 sleep(2)
 print ("Now stop!")
 Motor1E.write(bool(LOW))
+sleep(4)
 Motor2E.write(bool(LOW))
 
 #free
@@ -59,6 +60,7 @@ Motor1B.close()
 Motor1E.close()
 Motor2A.close()
 Motor2B.close()
+
 Motor2E.close()
 
 #end
